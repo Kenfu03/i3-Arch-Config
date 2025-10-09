@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#!/usr/bin/env bash
+echo "Args: $@" >> /tmp/rofi-debug.log
+env >> /tmp/rofi-debug.log
+
+if [ -z "$@" ]; then
+    echo "Lock"
+    echo "Logout"
+    echo "Reboot"
+    echo "Shutdown"
+else
+    case "$@" in
+        Lock) DISPLAY=:0 XAUTHORITY=/run/user/1000/lyxauth i3lock -c 000000 ;;
+        Logout) i3-msg exit ;;
+        Reboot) systemctl reboot ;;
+        Shutdown) systemctl poweroff ;;
+    esac
+fi

@@ -1,0 +1,37 @@
+#!/bin/bash
+
+#!/usr/bin/env bash
+echo "Args: $@" >> /tmp/rofi-debug.log
+env >> /tmp/rofi-debug.log
+
+if [ -z "$@" ]; then
+    echo "Suspend"
+    echo "Reboot"
+    echo "Shutdown"
+else
+    case "$@" in
+        #Lock*)
+        ## Close rofi
+        #pkill -u "$USER" -x rofi >/dev/null 2>&1 || true
+        ## Give X a moment to release keyboard/pointer
+        #sleep 0.3
+        ## Run i3lock in background
+        #i3lock -c 000000 &
+        #disown
+        #;;
+    
+        Suspend)
+            pkill -u "$USER" -x rofi >/dev/null 2>&1 || true
+            sleep 0.3
+            # lock first with desired color (change hex if you want)
+            i3lock -c 15121B && systemctl suspend
+            disown
+        ;;
+        Reboot) 
+            systemctl reboot 
+        ;;
+        Shutdown) 
+            systemctl poweroff 
+        ;;
+    esac
+fi

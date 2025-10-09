@@ -1,0 +1,8 @@
+configuration {
+    modi: "drun,run";
+    show-icons: true;
+    display-drun: "Apps";
+    font: "monospace 12";
+}
+
+@theme "~/.config/rofi/squareRed.rasi"

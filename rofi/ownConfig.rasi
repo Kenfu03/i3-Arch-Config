@@ -1,0 +1,34 @@
+configuration {
+    modi: "drun,run";
+    show-icons: true;
+    icon-theme: "Papirus";  /* change if you use a different theme */
+    display-drun: "Apps";
+    font: "monospace 12";
+}
+
+/* Layout */
+window {
+    width: 50%;
+    height: 50%;
+    location: center;
+}
+
+/* Grid style (like columns=4 in wofi) */
+listview {
+    columns: 4;
+    dynamic: false;
+    scrollbar: false;
+    cycle: false;
+}
+
+/* Appearance */
+element {
+    padding: 6px;
+    spacing: 10px;
+}
+
+element-icon {
+    size: 32px;
+}
+
+

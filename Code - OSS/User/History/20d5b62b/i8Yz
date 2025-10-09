@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#!/usr/bin/env bash
+echo "Args: $@" >> /tmp/rofi-debug.log
+env >> /tmp/rofi-debug.log
+
+if [ -z "$@" ]; then
+    echo "Suspend"
+    echo "Reboot"
+    echo "Shutdown"
+else
+    case "$@" in
+        #Lock*)
+        ## Close rofi
+        #pkill -u "$USER" -x rofi >/dev/null 2>&1 || true
+        ## Give X a moment to release keyboard/pointer
+        #sleep 0.3
+        ## Run i3lock in background
+        #i3lock -c 000000 &
+        #disown
+        #;;
+    
+        Suspend)
+            systemctl suspend
+        ;;
+        Reboot) systemctl reboot ;;
+        Shutdown) systemctl poweroff ;;
+    esac
+fi
