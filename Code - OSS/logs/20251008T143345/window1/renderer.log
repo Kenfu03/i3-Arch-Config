@@ -1,3 +1,0 @@
-2025-10-08 14:33:45.772 [info] Started local extension host with pid 2441.
-2025-10-08 14:33:48.456 [info] [perf] Render performance baseline is 20ms
-2025-10-08 14:33:58.256 [error] Error while getting the latest version for the extension pkief.material-icon-theme. Error: Fetch timeout: 10000ms

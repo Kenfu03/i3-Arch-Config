@@ -1,9 +1,0 @@
-2025-10-02 17:22:48.451 [info] Extension host with pid 4538 started
-2025-10-02 17:22:48.480 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
-2025-10-02 17:22:48.511 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
-2025-10-02 17:22:48.514 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
-2025-10-02 17:22:48.563 [info] Eager extensions activated
-2025-10-02 17:22:48.580 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
-2025-10-02 17:22:48.583 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
-2025-10-02 17:22:48.599 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
-2025-10-02 17:23:20.038 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github

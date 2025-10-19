@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+if kitty @ ls &>/dev/null; then
+    # If there's already a Kitty instance, open a new tab in it
+    kitty @ launch --type=tab --cwd="${PWD:-$HOME}" yazi
+else
+    # Otherwise open a new Kitty window
+    kitty --directory="${PWD:-$HOME}" -e yazi
+fi
+

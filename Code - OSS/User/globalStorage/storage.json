@@ -7,7 +7,7 @@
         "folders": [],
         "emptyWindows": [
             {
-                "backupFolder": "1759955625833"
+                "backupFolder": "1760384102204"
             }
         ]
     },
@@ -17,7 +17,7 @@
             "file:///home/kenek/Documents/GitThings/polybar-collection/fonts": "__default__profile__"
         },
         "emptyWindows": {
-            "1759955625833": "__default__profile__"
+            "1760384102204": "__default__profile__"
         }
     },
     "theme": "vs-dark",
@@ -52,13 +52,13 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/kenek/.config/Code - OSS/Backups/1759955625833",
+            "backupPath": "/home/kenek/.config/Code - OSS/Backups/1760384102204",
             "uiState": {
                 "mode": 0,
                 "x": 0,
-                "y": 0,
+                "y": 28,
                 "width": 1366,
-                "height": 768
+                "height": 740
             }
         },
         "openedWindows": []

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Open Yazi in an existing Kitty window as a new tab
+
+TARGET_DIR="${1:-$PWD}"
+
+# Check if a Kitty instance is running and remote control is allowed
+if kitty @ ls &>/dev/null; then
+    kitty @ launch --type=tab --cwd="$TARGET_DIR" yazi
+else
+    # If not, start a new kitty with remote control enabled
+    kitty --directory="$TARGET_DIR" -o allow_remote_control=yes -e yazi
+fi

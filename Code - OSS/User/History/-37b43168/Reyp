@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Opens Yazi in existing kitty tab if possible, otherwise new kitty window
+
+SOCKET="unix:/tmp/mykitty"
+TARGET_DIR="${PWD}"
+
+# Try to open in existing kitty window
+if kitty @ --to $SOCKET ls &>/dev/null; then
+    kitty @ --to $SOCKET launch --type=tab --cwd="$TARGET_DIR" yazi
+else
+    kitty --directory="$TARGET_DIR" -o allow_remote_control=yes -o listen_on=$SOCKET -e yazi
+fi

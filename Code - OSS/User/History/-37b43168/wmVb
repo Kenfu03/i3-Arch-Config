@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# If already inside a terminal emulator
+if [ -n "$TERM" ] && [ -n "$PS1" ]; then
+    # Run directly in the current terminal and PWD
+    yazi
+else
+    # Otherwise, open a new kitty in the same or given dir
+    kitty --directory="${PWD:-$HOME}" -e yazi
+fi

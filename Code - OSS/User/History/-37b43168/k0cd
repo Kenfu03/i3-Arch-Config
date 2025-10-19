@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Check if running inside kitty
+if [ "$TERM" = "xterm-kitty" ]; then
+    # We're already in a kitty terminal
+    yazi
+else
+    # We're not — open a new kitty window
+    kitty -e yazi
+fi

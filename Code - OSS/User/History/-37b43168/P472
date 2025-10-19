@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# ~/.config/scripts/yazi-launch
+# Opens Yazi in existing kitty tab if possible, otherwise new kitty window
+
+TARGET_DIR="${PWD}"
+
+# Try to open in existing kitty window (if one is running)
+if kitty @ ls &>/dev/null; then
+    kitty @ launch --type=tab --cwd="$TARGET_DIR" yazi
+else
+    kitty --directory="$TARGET_DIR" -o allow_remote_control=yes -e yazi
+fi
